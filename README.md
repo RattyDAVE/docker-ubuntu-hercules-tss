@@ -12,7 +12,7 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-tss/issues to send feedb
 
 ## Note
 
-This is not a ready to run system. You need to IPL 280 and then you can control via the telnet connection. (If you dont know what IPL 280 means then this container is not for you.)
+This is not a ready to run system. You need to IPL 250 and then you can control via the telnet connection. (If you dont know what IPL 280 means then this container is not for you.)
 
 ## Usage
 
