@@ -23,9 +23,9 @@ To get the http://docker.host:8038 for the Hercules console.
 Or
 
 ```
-docker run -d --name vm370 rattydave/docker-ubuntu-hercules-vm370:latest
+docker run -d --name tss rattydave/docker-ubuntu-hercules-tss:latest
 
-docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' vm370
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tss
 ```
 
 Then connect a 3270 terminal to the container ip address on port 3270.
