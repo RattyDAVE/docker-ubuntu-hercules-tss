@@ -23,4 +23,5 @@ EXPOSE      3270 8038
 WORKDIR     /opt/hercules/tss
 #ENTRYPOINT  ["/opt/hercules/tss/start_tss.sh"]
 
-ENTRYPOINT  ["/usr/bin/screen", "-dm", "-S", "herc", "/opt/hercules/tss/start_tss.sh"]
+#ENTRYPOINT  ["/usr/bin/screen", "-dm", "-S", "herc", "/opt/hercules/tss/start_tss.sh"]
+ENTRYPOINT  /usr/bin/screen -dm -S herc /opt/hercules/tss/start_tss.sh
