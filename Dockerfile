@@ -15,6 +15,7 @@ RUN	apt-get update && \
       echo "#!/bin/bash" > start_tss.sh && \
       echo "cd /opt/hercules/tss"  >> start_tss.sh && \
       echo "/usr/bin/screen -dm -S herc hercules -f tss.cnf"  >> start_tss.sh && \
+      echo "/bin/sh" >> start_tss.sh && \
       chmod 755 start_tss.sh && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
       rm -rf /var/lib/apt/lists/*
