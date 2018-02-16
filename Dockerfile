@@ -14,14 +14,11 @@ RUN	apt-get update && \
       apt-get -y autoclean && apt-get -y autoremove && \
       echo "#!/bin/bash" > start_tss.sh && \
       echo "cd /opt/hercules/tss"  >> start_tss.sh && \
-      echo "hercules -f tss.cnf > Log.txt"  >> start_tss.sh && \
+      echo "/usr/bin/screen -dm -S herc hercules -f tss.cnf"  >> start_tss.sh && \
       chmod 755 start_tss.sh && \
       apt-get -y purge $(dpkg --get-selections | grep deinstall | sed s/deinstall//g) && \
       rm -rf /var/lib/apt/lists/*
 
 EXPOSE      3270 8038
 WORKDIR     /opt/hercules/tss
-#ENTRYPOINT  ["/opt/hercules/tss/start_tss.sh"]
-
-#ENTRYPOINT  ["/usr/bin/screen", "-dm", "-S", "herc", "/opt/hercules/tss/start_tss.sh"]
-ENTRYPOINT  /usr/bin/screen -dm -S herc /opt/hercules/tss/start_tss.sh
+ENTRYPOINT  ["/opt/hercules/tss/start_tss.sh"]
