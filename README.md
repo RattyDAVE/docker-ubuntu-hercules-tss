@@ -45,3 +45,8 @@ To access a console connection - this will also be the console connection on fai
 telnet ipaddress 3270
 ```
 
+To get to the hercules screen in the docker container.
+
+```
+docker exec -it tss screen -d -RR herc
+```
