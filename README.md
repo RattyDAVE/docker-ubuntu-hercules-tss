@@ -9,6 +9,11 @@ Use https://github.com/RattyDAVE/docker-ubuntu-hercules-tss/issues to send feedb
 * https://hub.docker.com/r/rattydave/docker-ubuntu-hercules-mvs - Fully running MVS 3.8j Tur(n)key 4- System. IBM Mainframe.
 * https://hub.docker.com/r/rattydave/alpine-simh/ - AT&T, Data General, DEC PDPs and VAXen, Honeywell, HP and others. All with OSs. 
 
+
+## Note
+
+This is not a ready to run system. You need to IPL 280 and then you can control via the telnet connection. (If you dont know what IPL 280 means then this container is not for you.)
+
 ## Usage
 
 ```
