@@ -18,7 +18,7 @@ This is not a ready to run system. You need to IPL 250 and then you can control 
 ## Usage
 
 ```
-docker run -d --name tss \
+docker run -dit --name tss \
            -p 3270:3270 -p 8038:8038 \
            rattydave/docker-ubuntu-hercules-tss:latest
 ```
@@ -29,7 +29,7 @@ To get the http://docker.host:8038 for the Hercules console.
 Or
 
 ```
-docker run -d --name tss rattydave/docker-ubuntu-hercules-tss:latest
+docker run -dit --name tss rattydave/docker-ubuntu-hercules-tss:latest
 
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' tss
 ```
