@@ -1,5 +1,5 @@
 #FROM	ubuntu:16.04
-FROM	docker-ubuntu-hercules-tss:latest as builder 
+FROM	ubuntu:18.04 as builder 
 
 RUN	apt-get update && \
       apt-get install -y  unzip wget hercules mc screen && \
