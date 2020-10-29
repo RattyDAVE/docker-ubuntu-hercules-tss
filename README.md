@@ -52,3 +52,15 @@ To get to the hercules screen in the docker container.
 ```
 docker exec -it tss screen -d -RR herc
 ```
+
+
+## Auto Update
+
+To automatically update I recomend using watchtower.
+
+```
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  v2tec/watchtower 
+```
